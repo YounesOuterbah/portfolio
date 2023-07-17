@@ -1,0 +1,54 @@
+@media (max-width: 767px) {
+  .tech-list {
+    flex-wrap: wrap;
+  }
+
+  .tech-list li {
+    width: 33%;
+    margin-bottom: 15px;
+  }
+  .landing {
+    .name {
+      font-size: 2.5rem !important;
+    }
+    .title {
+      font-size: 1.3rem !important;
+      margin-top: -5px !important;
+    }
+    .about {
+      max-width: 100% !important;
+    }
+  }
+}
+
+@media (max-width: 991px) {
+  .about-me {
+    .container {
+      flex-direction: column-reverse;
+      .card img {
+        width: 100%;
+      }
+    }
+  }
+  .portfolio {
+    .card:first-child {
+      flex-direction: column-reverse;
+    }
+    .card:nth-child(2) {
+      flex-direction: column;
+    }
+    .card:nth-child(3) {
+      flex-direction: column-reverse;
+    }
+    .card:last-child {
+      flex-direction: column;
+    }
+    .card .details {
+      width: 100% !important;
+    }
+    .card .project-card {
+      width: 100% !important;
+      margin-top: 25px;
+    }
+  }
+}

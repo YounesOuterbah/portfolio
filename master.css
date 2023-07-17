@@ -1,0 +1,328 @@
+@import url("https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap");
+* {
+  box-sizing: border-box;
+  font-family: "Comic Neue", cursive;
+  scroll-behavior: smooth;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 100%;
+  background-color: #cccccc;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to right, #06b6d4, #4fd1c5);
+}
+
+body {
+  margin: 0;
+  background-color: rgb(17, 24, 39);
+  color: #fff;
+}
+
+ul {
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+@media (min-width: 576px) {
+  .container {
+    max-width: 540px;
+  }
+}
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1320px;
+  }
+}
+@media (max-width: 767px) {
+  .tech-list {
+    flex-wrap: wrap;
+  }
+  .tech-list li {
+    width: 33%;
+    margin-bottom: 15px;
+  }
+  .landing .name {
+    font-size: 2.5rem !important;
+  }
+  .landing .title {
+    font-size: 1.3rem !important;
+    margin-top: -5px !important;
+  }
+  .landing .about {
+    max-width: 100% !important;
+  }
+}
+@media (max-width: 991px) {
+  .about-me .container {
+    flex-direction: column-reverse;
+  }
+  .about-me .container .card img {
+    width: 100%;
+  }
+  .portfolio .card:first-child {
+    flex-direction: column-reverse;
+  }
+  .portfolio .card:nth-child(2) {
+    flex-direction: column;
+  }
+  .portfolio .card:nth-child(3) {
+    flex-direction: column-reverse;
+  }
+  .portfolio .card:last-child {
+    flex-direction: column;
+  }
+  .portfolio .card .details {
+    width: 100% !important;
+  }
+  .portfolio .card .project-card {
+    width: 100% !important;
+    margin-top: 25px;
+  }
+}
+.header {
+  height: 80px;
+}
+.header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.header .container .logo {
+  font-size: 22px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.header .container ul.list {
+  display: flex;
+  align-items: center;
+}
+.header .container ul.list li:first-child {
+  padding-right: 45px;
+  font-size: 24px;
+  line-height: 1.1px;
+}
+.header .container ul.list li:last-child {
+  background: linear-gradient(to right, #06b6d4, #4fd1c5);
+  background-color: #06b6d4;
+  color: #4fd1c5;
+  cursor: pointer;
+  padding: 10px;
+  font-size: 1.2rem;
+  border-radius: 4px;
+  transition: 0.3s;
+}
+.header .container ul.list li:last-child:hover {
+  opacity: 0.7;
+}
+
+.landing {
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.landing .arrow {
+  position: fixed;
+  bottom: 25px;
+  right: -35px;
+  color: white;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.8s;
+}
+.landing .arrow i {
+  background: linear-gradient(to right, #06b6d4, #4fd1c5);
+  padding: 5px;
+  border-radius: 6px;
+  font-size: 20px;
+}
+.landing .arrow.show {
+  right: 15px;
+  z-index: 999;
+}
+.landing .container {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.landing .container .name {
+  background: linear-gradient(to right, #06b6d4, #4fd1c5);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+  font-size: 5rem;
+  font-weight: 700;
+}
+.landing .container .title {
+  font-size: 3rem;
+  margin-top: -15px;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.landing .container .about {
+  font-size: 1.2rem;
+  color: #eee;
+  max-width: 60%;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.landing .container .icons {
+  margin-top: 10px;
+}
+.landing .container .icons a {
+  margin-left: 15px;
+  font-size: 30px;
+  margin-right: 15px;
+}
+.landing .container .icons a i {
+  transition: 0.3s;
+}
+.landing .container .icons a:hover i {
+  background: linear-gradient(to right, #06b6d4, #4fd1c5);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}
+.landing .container .tech-list {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.landing .container .tech-list li {
+  transition: 0.3s;
+}
+.landing .container .tech-list li:hover {
+  scale: 1.5;
+}
+.landing .container .tech-list li img {
+  width: 40px;
+}
+
+.about-me {
+  background: linear-gradient(to right, #06b6d4, #4fd1c5);
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.about-me .container {
+  display: flex;
+  align-items: center;
+}
+.about-me .container .card .main-title {
+  font-size: 1.5rem;
+  text-transform: uppercase;
+}
+.about-me .container .card .info {
+  line-height: 1.6;
+  font-weight: 700;
+  font-size: 1.3rem;
+}
+
+.portfolio {
+  text-align: center;
+  text-transform: uppercase;
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.portfolio .container .heading {
+  padding-bottom: 40px;
+}
+.portfolio .container .boxs .card {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+  width: 100%;
+  justify-content: space-between;
+}
+.portfolio .container .boxs .card .project-card {
+  background-color: #fff;
+  overflow: hidden;
+  border-radius: 14px;
+  transition: 1s;
+  width: 40%;
+}
+.portfolio .container .boxs .card .project-card:hover {
+  scale: 1.1;
+}
+.portfolio .container .boxs .card .project-card img {
+  border-top-left-radius: 14px;
+  border-top-right-radius: 14px;
+  width: 100%;
+  border: 1px solid white;
+}
+.portfolio .container .boxs .card .project-card .title {
+  font-size: 22px;
+  color: red;
+}
+.portfolio .container .boxs .card .details {
+  width: 40%;
+  line-height: 1.6;
+}
+.portfolio .container .boxs .card .details .project-name {
+  font-weight: 700;
+}
+.portfolio .container .boxs .card .details .tech {
+  margin-top: 5px;
+  font-weight: bold;
+}
+.portfolio .container .boxs .card .details .links {
+  margin-top: 15px;
+}
+.portfolio .container .boxs .card .details .links span {
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.footer {
+  box-shadow: -1px -2px 19px -10px #000;
+  padding: 5px;
+}
+.footer .container {
+  height: 40px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+}
+.footer .container .name {
+  font-size: 22px;
+}
+.footer .container .icons a {
+  margin-left: 30px;
+  font-size: 26px;
+  transition: 0.3s;
+}
+.footer .container .icons a:hover {
+  background: linear-gradient(to right, #06b6d4, #4fd1c5);
+  -webkit-background-clip: text;
+          background-clip: text;
+  color: transparent;
+}/*# sourceMappingURL=master.css.map */
